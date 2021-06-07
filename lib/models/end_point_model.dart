@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
-class SingleEndPoint {
-  SingleEndPoint({@required this.value, this.date}) : assert(value != null);
+class EndPointModel {
+  EndPointModel({@required this.value, this.date}) : assert(value != null);
   final int value;
   final DateTime date;
 

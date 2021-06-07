@@ -1,0 +1,10 @@
+{
+    "Cases": "Cases",
+    "Cases Confirmed": "Cases Confirmed",
+    "Cases Suspected": "Cases Suspected",
+    "Deaths": "Deaths",
+    "Recovered": "Recovered",
+    "errorTitle": "Connection Error",
+    "errorContent": "Could not retrieve data. Please try again later.",
+    "errprDefaultActionText": "OK"
+}

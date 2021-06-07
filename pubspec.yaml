@@ -25,6 +25,8 @@ dependencies:
   provider:
   intl:
   shared_preferences:
+  flutter_localizations:
+    sdk: flutter
 
   flutter:
     sdk: flutter
@@ -57,7 +59,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
-
+    - assets/languages/ar.json
+    - assets/languages/en.json
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

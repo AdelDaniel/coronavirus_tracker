@@ -1,15 +1,15 @@
-import 'single_end_point.dart';
+import 'end_point_model.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../services/api.dart';
 
 class EndPointsModel {
   EndPointsModel({@required this.endPointsValues});
-  final Map<EndPoint, SingleEndPoint> endPointsValues;
+  final Map<EndPoint, EndPointModel> endPointsValues;
 
-  SingleEndPoint get cases => endPointsValues[EndPoint.cases];
-  SingleEndPoint get casesConfirmed => endPointsValues[EndPoint.casesConfirmed];
-  SingleEndPoint get casesSuspected => endPointsValues[EndPoint.casesSuspected];
-  SingleEndPoint get deaths => endPointsValues[EndPoint.deaths];
-  SingleEndPoint get recovered => endPointsValues[EndPoint.recovered];
+  EndPointModel get cases => endPointsValues[EndPoint.cases];
+  EndPointModel get casesConfirmed => endPointsValues[EndPoint.casesConfirmed];
+  EndPointModel get casesSuspected => endPointsValues[EndPoint.casesSuspected];
+  EndPointModel get deaths => endPointsValues[EndPoint.deaths];
+  EndPointModel get recovered => endPointsValues[EndPoint.recovered];
 }

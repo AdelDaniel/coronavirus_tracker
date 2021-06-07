@@ -1,7 +1,11 @@
 import 'dart:io';
 
+import 'package:coronavirus_tracker/localization/app_localization.dart';
+
+import '../widgets/choose_Language_widget.dart';
+
 import '../models/end_points_model.dart';
-import '../repositries/data_repositry.dart';
+import '../providers_repositries/data_repositry.dart';
 import '../widgets/alert_dialog.dart';
 import '../widgets/time_last_update_text.dart';
 import '../services/api.dart';
@@ -38,8 +42,11 @@ class _DashboardState extends State<Dashboard> {
       });
     } on SocketException catch (_) {
       showAlertDialog(
+        //      "errorTitle": "خطاء أثناء الاتصال !",
+        // "errorContent": "لم نستطيع استدعاء البيانات .حاول مرة أخرى لاحقاً.",
+        // "errprDefaultActionText": "موافق"
         context: context,
-        title: 'Connection Error',
+        title: AppLocalization.of(context).translate("errorTitle"),
         content: 'Could not retrieve data. Please try again later.',
         defaultActionText: 'OK',
       );
@@ -58,6 +65,7 @@ class _DashboardState extends State<Dashboard> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
+          actions: [ChooseLanguageWidget()],
           centerTitle: true,
           title: const Text.rich(
             TextSpan(

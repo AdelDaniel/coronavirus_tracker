@@ -1,5 +1,5 @@
 import '../models/end_points_model.dart';
-import '../models/single_end_point.dart';
+import '../models/end_point_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,13 +13,13 @@ class DataCacheService {
   static String endPointDateKey(EndPoint endPoint) => '$endPoint/date';
 
   EndPointsModel getData() {
-    Map<EndPoint, SingleEndPoint> values = {};
+    Map<EndPoint, EndPointModel> values = {};
     EndPoint.values.forEach((endPoint) {
       final value = sharedPreferences.getInt(endPointValueKey(endPoint));
       final dateString = sharedPreferences.getString(endPointDateKey(endPoint));
       if (value != null && dateString != null) {
         final date = DateTime.tryParse(dateString);
-        values[endPoint] = SingleEndPoint(value: value, date: date);
+        values[endPoint] = EndPointModel(value: value, date: date);
       }
     });
     return EndPointsModel(endPointsValues: values);

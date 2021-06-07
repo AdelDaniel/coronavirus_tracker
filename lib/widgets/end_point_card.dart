@@ -1,3 +1,5 @@
+import 'package:coronavirus_tracker/localization/app_localization.dart';
+
 import '../services/api.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +46,9 @@ class EndPointCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                _cardsData[endPoint].title,
+                // _cardsData[endPoint].title,
+                AppLocalization.of(context)
+                    .translate(_cardsData[endPoint].title),
                 style: ThemeData.dark()
                     .textTheme
                     .headline1

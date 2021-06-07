@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import '../models/single_end_point.dart';
+import '../models/end_point_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
@@ -30,7 +30,7 @@ class APIService {
     throw response;
   }
 
-  Future<SingleEndPoint> getEndPoints(
+  Future<EndPointModel> getEndPoints(
       {@required String accessToken, EndPoint endPoint}) async {
     final response = await http.get(
       api.endPointUri(endPoint),
@@ -43,7 +43,7 @@ class APIService {
       final String accessTokenDateString = map['date'];
       final DateTime date = DateTime.tryParse(accessTokenDateString);
       if (endPointData != null) {
-        return SingleEndPoint(value: endPointData, date: date);
+        return EndPointModel(value: endPointData, date: date);
       }
     }
     print(

@@ -1,0 +1,10 @@
+{
+    "Cases": "الحالات",
+    "Cases Confirmed": "الحالات المؤكدة",
+    "Cases Suspected": "الحالات المشتبه فيها",
+    "Deaths": "الوفيات",
+    "Recovered": "الحالات المتعافية",
+    "errorTitle": "خطاء أثناء الاتصال !",
+    "errorContent": "لم نستطيع استدعاء البيانات .حاول مرة أخرى لاحقاً.",
+    "errprDefaultActionText": "موافق"
+  }

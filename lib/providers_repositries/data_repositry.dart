@@ -1,4 +1,4 @@
-import '../models/single_end_point.dart';
+import '../models/end_point_model.dart';
 import '../models/end_points_model.dart';
 import '../services/api.dart';
 import '../services/api_service.dart';
@@ -16,8 +16,8 @@ class DataRepositry {
     return dataCacheService.getData();
   }
 
-  Future<SingleEndPoint> getEndPointData({@required EndPoint endPoint}) async =>
-      await _getData<SingleEndPoint>(
+  Future<EndPointModel> getEndPointData({@required EndPoint endPoint}) async =>
+      await _getData<EndPointModel>(
           function: () => apiService.getEndPoints(
               accessToken: _accessToken, endPoint: endPoint));
 
